@@ -19,7 +19,10 @@ DISCORD_TOKEN = os.getenv('MTUwOTI2Mjg3MjI0MzQ3NDUwMw.G6F5gR.jpsaEImrXt7-h28rLfA
 GROQ_API_KEY  = os.getenv('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')
 
 # ── Client Groq ──────────────────────────────────────────────
-groq_client = Groq(api_key=GROQ_API_KEY)
+# On force un client HTTP sans proxy pour éviter le bug httpx
+import httpx
+http_client = httpx.Client(proxies=None)
+groq_client = Groq(api_key=GROQ_API_KEY, http_client=http_client)
 
 # ── Intents Discord ──────────────────────────────────────────
 intents = discord.Intents.default()
