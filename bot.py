@@ -15,8 +15,8 @@ from keep_alive import keep_alive
 
 # ── Chargement des variables d'environnement ────────────────
 load_dotenv()
-DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
-GROQ_API_KEY  = os.getenv('GROQ_API_KEY')
+DISCORD_TOKEN = os.getenv('MTUwOTI2Mjg3MjI0MzQ3NDUwMw.G6F5gR.jpsaEImrXt7-h28rLfA5w-saTZSR6dDu-LYMjM')
+GROQ_API_KEY  = os.getenv('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')
 
 # ── Client Groq ──────────────────────────────────────────────
 groq_client = Groq(api_key=GROQ_API_KEY)
